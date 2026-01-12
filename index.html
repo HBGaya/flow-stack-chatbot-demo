@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowStack – Team Task Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Basic Reset */
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter', sans-serif; }
+    body { background: #F9F8FC; color: #1F1A2F; }
+
+    /* Colors */
+    :root {
+      --purple-dark: #4B3BFF;
+      --purple-light: #AFA5FF;
+      --purple-bg: #F2F0FF;
+      --white: #FFFFFF;
+      --gray-text: #5C5678;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* Container */
+    .container { max-width: 1200px; margin: auto; padding: 0 20px; }
+
+    /* Header */
+    header {
+      background: var(--purple-dark);
+      color: var(--white);
+      padding: 20px 0;
+    }
+    header .logo { font-weight: 700; font-size: 24px; }
+    nav { float: right; }
+    nav a { margin-left: 25px; font-weight: 500; }
+
+    /* Hero */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 100px 0 80px 0;
+      background: linear-gradient(135deg, var(--purple-dark), var(--purple-light));
+      color: var(--white);
+      text-align: left;
+    }
+    .hero h1 { font-size: 48px; margin-bottom: 20px; }
+    .hero p { font-size: 18px; margin-bottom: 30px; line-height: 1.5; max-width: 600px; }
+    .hero .btn { background: var(--white); color: var(--purple-dark); padding: 12px 25px; border-radius: 8px; font-weight: 600; transition: 0.3s; }
+    .hero .btn:hover { background: #E6E0FF; }
+
+    /* Features */
+    .features { padding: 80px 0; background: var(--purple-bg); }
+    .features h2 { text-align: center; font-size: 36px; margin-bottom: 60px; }
+    .feature-grid { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
+    .feature { background: var(--white); padding: 30px; border-radius: 15px; flex: 1 1 250px; max-width: 300px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; }
+    .feature:hover { transform: translateY(-5px); }
+    .feature h3 { font-size: 22px; margin-bottom: 15px; color: var(--purple-dark); }
+    .feature p { font-size: 16px; color: var(--gray-text); }
+
+    /* Pricing */
+    .pricing { padding: 80px 0; }
+    .pricing h2 { text-align: center; font-size: 36px; margin-bottom: 60px; }
+    .pricing-grid { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
+    .plan { background: var(--white); padding: 30px; border-radius: 15px; flex: 1 1 250px; max-width: 300px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; }
+    .plan h3 { font-size: 22px; margin-bottom: 10px; color: var(--purple-dark); }
+    .plan p.price { font-size: 28px; margin-bottom: 20px; font-weight: 700; color: var(--purple-dark); }
+    .plan ul { list-style: none; margin-bottom: 20px; color: var(--gray-text); }
+    .plan ul li { margin-bottom: 10px; }
+    .plan .btn { background: var(--purple-dark); color: var(--white); padding: 10px 20px; border-radius: 8px; font-weight: 600; transition: 0.3s; }
+    .plan .btn:hover { background: var(--purple-light); color: var(--purple-dark); }
+
+    /* CTA */
+    .cta { background: var(--purple-dark); color: var(--white); padding: 80px 0; text-align: center; }
+    .cta h2 { font-size: 36px; margin-bottom: 20px; }
+    .cta p { font-size: 18px; margin-bottom: 30px; }
+    .cta .btn { background: var(--white); color: var(--purple-dark); padding: 12px 25px; border-radius: 8px; font-weight: 600; transition: 0.3s; }
+    .cta .btn:hover { background: #E6E0FF; }
+
+    /* Footer */
+    footer { padding: 20px 0; text-align: center; color: var(--gray-text); font-size: 14px; }
+
+    /* Responsive */
+    @media(max-width: 768px){
+      .hero h1 { font-size: 36px; }
+      .hero p { font-size: 16px; }
+      .feature-grid, .pricing-grid { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="container">
+    <div class="logo">FlowStack</div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#cta">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero container">
+    <h1>Manage Your Team Effortlessly</h1>
+    <p>All your tasks, deadlines & collaboration in one place. FlowStack makes team productivity simple and powerful.</p>
+    <a href="#cta" class="btn">Get Started</a>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features container">
+    <h2>Features</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>Task Management</h3>
+        <p>Create, assign, and track tasks for your team seamlessly.</p>
+      </div>
+      <div class="feature">
+        <h3>Team Collaboration</h3>
+        <p>Chat, share files, and work together in real-time.</p>
+      </div>
+      <div class="feature">
+        <h3>Analytics Dashboard</h3>
+        <p>Monitor team performance with easy-to-read analytics.</p>
+      </div>
+      <div class="feature">
+        <h3>Integrations</h3>
+        <p>Connect FlowStack with your favorite apps and tools.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="pricing container">
+    <h2>Pricing</h2>
+    <div class="pricing-grid">
+      <div class="plan">
+        <h3>Starter</h3>
+        <p class="price">$9/mo</p>
+        <ul>
+          <li>Individual Use</li>
+          <li>Basic Analytics</li>
+          <li>Email Support</li>
+        </ul>
+        <a href="#cta" class="btn">Choose Plan</a>
+      </div>
+      <div class="plan">
+        <h3>Pro</h3>
+        <p class="price">$29/mo</p>
+        <ul>
+          <li>Small Teams</li>
+          <li>Advanced Analytics</li>
+          <li>Priority Support</li>
+        </ul>
+        <a href="#cta" class="btn">Choose Plan</a>
+      </div>
+      <div class="plan">
+        <h3>Team</h3>
+        <p class="price">$59/mo</p>
+        <ul>
+          <li>Growing Companies</li>
+          <li>Full Analytics & Reports</li>
+          <li>24/7 Support</li>
+        </ul>
+        <a href="#cta" class="btn">Choose Plan</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="cta container">
+    <h2>Have Questions? Let FlowBot Help!</h2>
+    <p>Chat with our assistant to learn more about FlowStack, pricing, or book a demo instantly.</p>
+    <a href="#" class="btn">Start Chat</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 FlowStack. All rights reserved.
+  </footer>
+
+  <!-- Tidio Chatbot Embed -->
+  <script src="//code.tidio.co/YOUR_TIDIO_KEY.js" async></script>
+
+</body>
+</html>
