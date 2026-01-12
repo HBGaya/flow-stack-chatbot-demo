@@ -99,10 +99,22 @@ nav a {
 }
 .feature p { color:var(--text-muted); font-size:18px; }
 .mock {
-  background:white;
-  border-radius:16px;
-  height:260px;
-  box-shadow:0 20px 40px rgba(0,0,0,0.08);
+  background: white;
+  border-radius: 16px;
+  height: 260px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* crop overflowing parts if image is bigger */
+}
+
+.mock img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* ensures it scales nicely */
+  border-radius: 16px; /* optional, match the container */
 }
 
 /* PRICING */
@@ -189,7 +201,9 @@ footer {
       <h3>Tasks that move work forward</h3>
       <p>Create, assign and track tasks with clarity and zero friction.</p>
     </div>
-    <div class="mock"></div>
+    <div class="mock">
+      <img src="images/flow-stack1.jpg" alt="Task management illustration">
+    </div>
   </div>
 
   <div class="feature">
@@ -197,7 +211,9 @@ footer {
       <h3>Built for team collaboration</h3>
       <p>Chat, comment and share files where work actually happens.</p>
     </div>
-    <div class="mock"></div>
+    <div class="mock">
+      <img src="images/flow-stack2.jpg" alt="Team collaboration illustration">
+    </div>
   </div>
 
   <div class="feature">
@@ -205,7 +221,9 @@ footer {
       <h3>Insights that matter</h3>
       <p>Dashboards that help founders see progress instantly.</p>
     </div>
-    <div class="mock"></div>
+    <div class="mock">
+      <img src="images/flow-stack3.jpg" alt="Insights dashboard illustration">
+    </div>
   </div>
 </section>
 
